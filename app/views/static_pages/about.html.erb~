@@ -1,0 +1,10 @@
+<% provide(:title, 'About') %>
+<!Doctype html>
+<html>
+  <head>
+    <title>Ruby|<% yield(:title) %></title>
+  </head>
+  <body>
+    <h1>About Page</h1>
+  </body>
+</html>
