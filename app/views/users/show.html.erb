@@ -3,8 +3,17 @@
   <asside class="span4"
     <section>
       <h1>
-        <%= gravatar_for @user %>
+        <%= gravatar_for @user, "" %>
         <%= @user.name %>
     </section>
   </asside>
+  <div class="span8">
+    <% if @user.microposts.any? %>
+      <p>Microposts (<%= @user.microposts.count %>)</p>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
 </div>
